@@ -19,3 +19,10 @@ key.properties
 !gradlew
 !gradlew.bat
 !gradle/wrapper/gradle-wrapper.jar
+
+# Excepción explícita para la firma activa de Trivia.
+!/firma-google-play/
+/firma-google-play/*
+!/firma-google-play/trivia-upload-keystore.jks
+!/firma-google-play/credenciales.properties
+!/key.properties

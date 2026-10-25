@@ -36,7 +36,13 @@ Las pruebas visuales y algunas herramientas de emulador conservan rutas del ento
 
 ## Compilar una versión de publicación
 
-Las claves de firma y sus contraseñas **no están en este repositorio**. Para generar una versión firmada, creá localmente `android/key.properties` tomando como referencia `android/key.properties.example` y configurá tu archivo de clave. Las claves existentes del proyecto se conservan fuera de Git.
+La firma activa de Trivia y su configuración están incluidas por indicación del propietario:
+
+- `android/firma-google-play/trivia-upload-keystore.jks`: almacén de firma.
+- `android/key.properties`: configuración que utiliza Gradle, con ruta relativa al almacén.
+- `android/firma-google-play/credenciales.properties`: copia de la configuración de firma.
+
+Las firmas anteriores y sus respaldos permanecen fuera del repositorio. Para usar otra firma, configurá localmente `android/key.properties` a partir de `android/key.properties.example`.
 
 ```sh
 flutter build apk --release --split-per-abi --target-platform android-arm64,android-x64 --obfuscate --split-debug-info=output/simbolos

@@ -86,3 +86,10 @@ key.properties
 
 # Certificado público de carga solicitado para el repositorio.
 !/docs/certificados/trivia-upload-certificate.pem
+
+# Firma activa de Trivia incluida por indicación explícita del propietario.
+!/android/firma-google-play/
+/android/firma-google-play/*
+!/android/firma-google-play/trivia-upload-keystore.jks
+!/android/firma-google-play/credenciales.properties
+!/android/key.properties

@@ -1,0 +1,62 @@
+name: trivia_antiguedad
+description: "Trivia de la Unidad IV: evaluación individual offline para tableta."
+publish_to: 'none'
+version: 1.1.78+4086
+
+environment:
+  sdk: ^3.13.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_riverpod: ^3.4.3
+  shared_preferences: ^2.5.5
+  audioplayers: ^6.8.1
+  pdf: ^3.13.1
+  printing: ^5.15.1
+  file_picker: ^13.1.0
+  path_provider: ^2.1.6
+  crypto: ^3.0.7
+
+dev_dependencies:
+  audioplayers_platform_interface: ^7.2.0
+  integration_test:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/contenido/trivia-unidad-iv.json
+    - assets/contenido/nomina-inicial.json
+    - assets/documentos/portada-original-2026.png
+    - assets/documentos/escudo-pscs.jpg
+    - assets/imagenes/iconos-unidad-iv/optimizados/
+    - assets/fuentes/pdf/
+    - assets/contenido/preguntas-base.json
+    - assets/contenido/politica-privacidad.txt
+    - assets/imagenes/optimizadas/conversation-background-v2.webp
+    - assets/imagenes/optimizadas/marcas-naranjas.webp
+    - assets/imagenes/optimizadas/trivia-antiguedad-logo.webp
+    - assets/sonidos/
+    - assets/sonidos/evaluacion/
+  fonts:
+    - family: Outfit
+      fonts:
+        - asset: assets/fuentes/Outfit-Regular.ttf
+          weight: 400
+        - asset: assets/fuentes/Outfit-Medium.ttf
+          weight: 500
+        - asset: assets/fuentes/Outfit-SemiBold.ttf
+          weight: 600
+        - asset: assets/fuentes/Outfit-Bold.ttf
+          weight: 700
+        - asset: assets/fuentes/Outfit-ExtraBold.ttf
+          weight: 800
+    - family: PhosphorBold
+      fonts:
+        - asset: assets/fuentes/Phosphor-Bold.ttf

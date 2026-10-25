@@ -1,0 +1,80 @@
+[
+  {
+    "id": "S01",
+    "apellido": "Azol",
+    "nombre": "Mateo",
+    "presente": true
+  },
+  {
+    "id": "S02",
+    "apellido": "Cardozo",
+    "nombre": "Laura Samanta",
+    "presente": true
+  },
+  {
+    "id": "S03",
+    "apellido": "Falcón",
+    "nombre": "María Eugenia",
+    "presente": true
+  },
+  {
+    "id": "S04",
+    "apellido": "Nanio",
+    "nombre": "Mateo",
+    "presente": true
+  },
+  {
+    "id": "S05",
+    "apellido": "Ocampo",
+    "nombre": "Camila",
+    "presente": true
+  },
+  {
+    "id": "S06",
+    "apellido": "Ocampo",
+    "nombre": "Melina",
+    "presente": true
+  },
+  {
+    "id": "S07",
+    "apellido": "Olivera",
+    "nombre": "Esteban Juan Daniel",
+    "presente": true
+  },
+  {
+    "id": "S08",
+    "apellido": "Pereyra",
+    "nombre": "Andrés",
+    "presente": true
+  },
+  {
+    "id": "S09",
+    "apellido": "Quintana Arriola",
+    "nombre": "Roberto",
+    "presente": true
+  },
+  {
+    "id": "S10",
+    "apellido": "Ramírez",
+    "nombre": "Valentina",
+    "presente": true
+  },
+  {
+    "id": "S11",
+    "apellido": "Riquelme",
+    "nombre": "Carlos Abel",
+    "presente": true
+  },
+  {
+    "id": "S12",
+    "apellido": "Russo",
+    "nombre": "Pamela",
+    "presente": true
+  },
+  {
+    "id": "S13",
+    "apellido": "Schneider",
+    "nombre": "Esperanza Micaela",
+    "presente": true
+  }
+]

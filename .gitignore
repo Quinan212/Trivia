@@ -1,0 +1,85 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.pid
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Archivo histórico de la app original: contiene APK y evidencias antiguas.
+/heredado-original/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Widget Preview related
+.widget_preview/
+
+# Firma de subida nueva de Trivia para Google Play: material privado local.
+/android/firma-google-play/
+/android/key.properties
+
+# Archivos locales y resultados de trabajo (se conservan en esta PC).
+/qa/
+/tmp/
+/output/*
+!/output/Plantilla-banco-preguntas.json
+!/output/Plantilla-estudiantes.json
+!/output/Guia-bancos-JSON.md
+!/output/Guia-estudiantes-JSON.md
+/android/build/
+/android/.kotlin/
+**/__pycache__/
+/AGENTS.md
+/design-qa.md
+/docs/AGENTS-historico-conversacion.md
+/docs/MODOS-EMULADOR-GPU-Y-BATERIA.md
+/docs/publicacion-google-play.md
+/.vscode/settings.json
+*.code-workspace
+
+# Credenciales y firmas privadas.
+.env
+.env.*
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+key.properties

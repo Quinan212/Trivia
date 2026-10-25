@@ -1,0 +1,16 @@
+{
+  "formato": "estudiantes-trivia",
+  "version": 1,
+  "estudiantes": [
+    {
+      "apellido": "Pérez",
+      "nombre": "María Eugenia",
+      "presente": true
+    },
+    {
+      "apellido": "Gómez",
+      "nombre": "Juan Pablo",
+      "presente": true
+    }
+  ]
+}

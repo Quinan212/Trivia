@@ -1,0 +1,6 @@
+# Copiar a android/key.properties y completar solo en la PC de desarrollo.
+# La ruta se resuelve desde android/app/.
+storeFile=../firma-local/trivia-upload.jks
+storePassword=CAMBIAR_LOCALMENTE
+keyAlias=trivia
+keyPassword=CAMBIAR_LOCALMENTE

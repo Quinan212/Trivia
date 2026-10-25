@@ -44,6 +44,8 @@ flutter build apk --release --split-per-abi --target-platform android-arm64,andr
 
 Las APK se generan en `build/app/outputs/flutter-apk/`. Los símbolos y los resultados de compilación permanecen locales. Para Google Play se puede generar un Android App Bundle con `flutter build appbundle --release` usando la firma de publicación correspondiente.
 
+El [certificado público de carga](docs/certificados/trivia-upload-certificate.pem) está disponible en el repositorio; su [huella SHA-256](docs/certificados/README.md) permite verificarlo.
+
 ## Plantillas
 
 - [Preguntas](output/Plantilla-banco-preguntas.json) · [Guía de bancos](output/Guia-bancos-JSON.md)

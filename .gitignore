@@ -83,3 +83,6 @@ app.*.map.json
 *.pfx
 *.pem
 key.properties
+
+# Certificado público de carga solicitado para el repositorio.
+!/docs/certificados/trivia-upload-certificate.pem

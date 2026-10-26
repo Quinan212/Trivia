@@ -104,7 +104,6 @@ class _PantallaEvaluacionState extends ConsumerState<PantallaEvaluacion>
   bool _reverso = false;
   String? _candidatoRobo;
   final Map<String, Future<({Uint8List bytes, int paginas})>> _pdfs = {};
-  final _apellido = TextEditingController(), _nombre = TextEditingController();
   late final CoordinadorCarta _avanceCarta;
   final _scrollNomina = ScrollController();
   final _scrollResultados = ScrollController();
@@ -164,8 +163,6 @@ class _PantallaEvaluacionState extends ConsumerState<PantallaEvaluacion>
     _scrollNomina.dispose();
     _scrollResultados.dispose();
     _scrollBanco.dispose();
-    _apellido.dispose();
-    _nombre.dispose();
     super.dispose();
   }
 
@@ -548,8 +545,6 @@ class _PantallaEvaluacionState extends ConsumerState<PantallaEvaluacion>
     if (mounted) {
       setState(() {
         _pdfs.clear();
-        _apellido.clear();
-        _nombre.clear();
         _candidatoRobo = null;
       });
     }
@@ -628,6 +623,25 @@ class _PantallaEvaluacionState extends ConsumerState<PantallaEvaluacion>
       );
     } finally {
       if (mounted) setState(() => _ocupada = false);
+    }
+  }
+
+  Future<void> _agregarEstudiante() async {
+    if (_ocupada ||
+        _editandoEstudiante ||
+        _c!.sesion.iniciada ||
+        _c!.sesion.alumnos.length >= 20) {
+      return;
+    }
+    _sonido(EfectoInterfaz.evaluacionMenu);
+    _editandoEstudiante = true;
+    try {
+      final nuevo = await agregarEstudiante(context);
+      if (nuevo == null || !mounted) return;
+      _hacer((m) => m.agregarAlumno(nuevo.apellido, nuevo.nombre));
+      _pdfs.clear();
+    } finally {
+      _editandoEstudiante = false;
     }
   }
 
@@ -1198,58 +1212,22 @@ class _PantallaEvaluacionState extends ConsumerState<PantallaEvaluacion>
           ),
           if (!s.iniciada && s.alumnos.length < 20) ...[
             const SizedBox(height: 20),
-            Wrap(
-              spacing: 10,
-              runSpacing: 10,
-              crossAxisAlignment: WrapCrossAlignment.center,
-              children: [
-                SizedBox(
-                  width: 210,
-                  child: TextField(
-                    controller: _apellido,
-                    decoration: const InputDecoration(
-                      labelText: 'Apellido',
-                      border: OutlineInputBorder(),
-                    ),
-                    maxLength: 120,
-                    buildCounter: (
-                      _, {
-                      required currentLength,
-                      required isFocused,
-                      maxLength,
-                    }) => null,
-                  ),
+            Align(
+              alignment: Alignment.centerRight,
+              child: IconButton(
+                key: const ValueKey('abrir-nuevo-estudiante'),
+                tooltip: 'Añadir estudiante',
+                onPressed: _ocupada || _editandoEstudiante
+                    ? null
+                    : _agregarEstudiante,
+                style: IconButton.styleFrom(
+                  fixedSize: const Size.square(44),
+                  minimumSize: const Size.square(44),
+                  padding: EdgeInsets.zero,
+                  shape: const CircleBorder(),
                 ),
-                SizedBox(
-                  width: 230,
-                  child: TextField(
-                    controller: _nombre,
-                    decoration: const InputDecoration(
-                      labelText: 'Nombre',
-                      border: OutlineInputBorder(),
-                    ),
-                    maxLength: 120,
-                    buildCounter: (
-                      _, {
-                      required currentLength,
-                      required isFocused,
-                      maxLength,
-                    }) => null,
-                  ),
-                ),
-                _boton(
-                  'Añadir',
-                  () {
-                    _hacer(
-                      (m) => m.agregarAlumno(_apellido.text, _nombre.text),
-                    );
-                    _apellido.clear();
-                    _nombre.clear();
-                  },
-                  icono: Icons.add,
-                  secundario: true,
-                ),
-              ],
+                icon: const Icon(Icons.add),
+              ),
             ),
           ],
         ],

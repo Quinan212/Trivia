@@ -1332,6 +1332,55 @@ void main() {
   );
 
   testWidgets(
+    'añade estudiantes desde el botón más y cancelar conserva la lista',
+    (tester) async {
+      final c = ControladorEvaluacion(
+        muestra(2),
+        _RepoMemoria(),
+        temporizador: false,
+      );
+      await _montar(tester, c);
+      expect(find.byType(TextField), findsNothing);
+      await tester.tap(_boton('abrir-nuevo-estudiante'));
+      await tester.pumpAndSettle();
+      expect(find.text('Nuevo estudiante'), findsOneWidget);
+      expect(
+        tester.widget<FilledButton>(_boton('guardar-estudiante')).onPressed,
+        isNull,
+      );
+      expect(_boton('eliminar-estudiante'), findsNothing);
+      await tester.enterText(_boton('editar-estudiante-apellido'), 'Quintero');
+      await tester.pumpAndSettle();
+      expect(
+        tester.widget<FilledButton>(_boton('guardar-estudiante')).onPressed,
+        isNull,
+      );
+      await tester.tap(find.text('Cancelar'));
+      await tester.pumpAndSettle();
+      expect(c.sesion.alumnos.length, 2);
+      await tester.tap(_boton('abrir-nuevo-estudiante'));
+      await tester.pumpAndSettle();
+      await tester.enterText(_boton('editar-estudiante-apellido'), 'Quintero');
+      await tester.enterText(_boton('editar-estudiante-nombre'), 'Elena');
+      await tester.pumpAndSettle();
+      await tester.tap(_boton('guardar-estudiante'));
+      await tester.pumpAndSettle();
+      expect(c.sesion.alumnos.length, 3);
+      final nuevo = c.sesion.alumnos.singleWhere(
+        (a) => a.apellido == 'Quintero',
+      );
+      expect(nuevo.nombre, 'Elena');
+      expect(nuevo.presente, isTrue);
+      expect(_boton('dialogo-estudiante'), findsNothing);
+      expect(tester.takeException(), isNull);
+      await tester.pumpWidget(const SizedBox());
+      c.dispose();
+      await tester.pump();
+      await c.guardadoPendiente;
+    },
+  );
+
+  testWidgets(
     'pulsación prolongada edita y elimina estudiantes sin cambiar asistencia',
     (tester) async {
       tester.view.physicalSize = const Size(1280, 800);
@@ -1353,6 +1402,7 @@ void main() {
         _boton('editar-estudiante-nombre'),
         'María Eugenia',
       );
+      await tester.pumpAndSettle();
       await tester.tap(_boton('guardar-estudiante'));
       await tester.pumpAndSettle();
       expect(c.sesion.alumnos.first.nombre, 'María Eugenia');

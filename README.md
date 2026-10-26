@@ -8,42 +8,17 @@ Se puede adaptar a distintas materias mediante bancos de preguntas propios. Incl
 
 Es **gratuita y funciona sin conexión**, sin cuentas, anuncios ni compras. Está diseñada para tabletas, tanto en horizontal como en vertical.
 
-## Guía visual
-
-Una demostración breve con capturas reales de la app, flechas y resaltados para ubicar los controles de asistencia, tiempo, robo e informes. Los estudiantes y los resultados son ficticios; el ejemplo de Resultados muestra un cierre anticipado de prueba.
-
-![Demostración de Trivia: asistencia, cronómetro, robo e informes PDF](docs/guia-visual/trivia-guia-demo.gif)
-
-[Ver o descargar el video MP4](docs/guia-visual/trivia-guia-demo.mp4).
-
-<details>
-<summary>Ver las capturas explicadas, paso a paso</summary>
-
-**1. Preparar la evaluación:** marcá presentes y ausentes antes de iniciar.
-
-![Dónde marcar la asistencia de cada estudiante](docs/guia-visual/01-asistencia.png)
-
-**2. Iniciar el tiempo:** leé la pregunta y sus opciones antes de activar los 60 segundos.
-
-![Control para iniciar el tiempo de respuesta](docs/guia-visual/02-cronometro.png)
-
-**3. Elegir un participante para el robo:** si la respuesta no fue correcta, usá el control señalado para elegir a otro estudiante habilitado.
-
-![Control de selección de estudiante para un intento de robo](docs/guia-visual/03-robo.png)
-
-**4. Consultar los informes:** desde Resultados, abrí el PDF que reúne los informes del curso.
-
-![Acceso a todos los informes de evaluación en PDF](docs/guia-visual/04-informes.png)
-
-</details>
-
 ## Cómo se usa en clase
 
 ### 1. Prepará la evaluación
 
 Configurá la materia, el tema o unidad, la comisión, el docente y, si corresponde, el ayudante de cátedra. Podés elegir entre cinco paletas de colores.
 
+![Dónde configurar la materia, la unidad y los datos docentes](docs/guia-visual/configuracion.png)
+
 En **Estudiantes**, revisá los nombres y marcá presentes y ausentes. Podés cargar una lista propia y corregir un nombre manteniendo presionada su fila. Antes de comenzar también se pueden eliminar estudiantes.
+
+![Cómo cargar la lista de estudiantes desde un archivo JSON](docs/guia-visual/estudiantes.png)
 
 La app admite **hasta 20 estudiantes** y reserva **10 preguntas distintas para cada uno**. El banco debe alcanzar para todas las personas registradas, incluidos los ausentes: una lista de 15 estudiantes necesita al menos 150 preguntas.
 
@@ -58,6 +33,10 @@ Leé el enunciado y las cuatro alternativas en voz alta. Después tocá **«Inic
 Si la respuesta es incorrecta, no contesta o se agota el tiempo, podés elegir a otro estudiante habilitado para intentar un **robo**. Hay hasta **dos intentos de robo por pregunta**, con un intento por persona.
 
 La respuesta correcta y la explicación quedan disponibles para revisar al cerrar la pregunta. Después se puede avanzar al siguiente turno. **Deshacer** permite corregir un registro equivocado.
+
+![Un turno de Trivia: iniciar el tiempo, registrar una respuesta, abrir un robo y revisar la explicación](docs/guia-visual/trivia-turno.gif)
+
+[Ver el turno con sonido](docs/guia-visual/trivia-turno.mp4).
 
 ### 4. Consultá los resultados
 
@@ -78,6 +57,8 @@ La aprobación es desde **7 puntos**. Al alcanzar ese puntaje, la app permite el
 Podés preparar Trivia para otra materia cargando un **banco de preguntas en formato JSON**. Cada pregunta incluye un tema, un enunciado, cuatro opciones, la respuesta correcta y una explicación. El banco se puede consultar y filtrar por tema desde la sección **Banco**.
 
 Se admiten bancos de **10 a 2000 preguntas**, siempre que alcancen para reservar diez por estudiante. La app permite descargar una plantilla y volver al banco incluido cuando lo necesites.
+
+![Dónde cargar un banco de preguntas y descargar su plantilla](docs/guia-visual/banco.png)
 
 La lista de estudiantes también se puede cargar desde un archivo JSON o descargar como plantilla con los nombres y la asistencia actuales.
 

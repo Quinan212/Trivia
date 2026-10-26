@@ -42,7 +42,7 @@ Para corregir un nombre, mantené presionada la fila y guardá los cambios en el
 
 También podés **añadir estudiantes manualmente**: completá Apellido y Nombre debajo de la lista y tocá **Añadir**. La eliminación está disponible antes de iniciar, siempre que quede al menos un estudiante. Corregir un nombre durante la evaluación conserva sus respuestas y puntos.
 
-![Edición de apellido y nombre mediante una pulsación prolongada](docs/guia-visual/editar-estudiante.png)
+![Tres pasos para editar: mantener presionada la fila del estudiante, modificar los campos y tocar Guardar](docs/guia-visual/editar-estudiante.png)
 
 La app admite **hasta 20 estudiantes** y reserva **10 preguntas distintas para cada uno**. El banco debe alcanzar para todas las personas registradas, incluidos los ausentes: una lista de 15 estudiantes necesita al menos 150 preguntas.
 

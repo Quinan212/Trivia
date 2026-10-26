@@ -873,7 +873,7 @@ void main() {
         _RepoMemoria(),
         temporizador: false,
       );
-      await _montar(tester, c);
+      await _montar(tester, c, reducido: false);
       final r = c.sesion.actual!;
       final correcta = r.indiceCorrecto(banco);
       final marco = tester.getRect(_boton('superficie-pregunta'));
@@ -882,8 +882,37 @@ void main() {
       await tester.pumpAndSettle();
       expect(r.propio, isNull);
       expect(_boton('responder-0'), findsNothing);
+      expect(_boton('icono-reloj-pausado'), findsNothing);
       await tester.tap(_boton('control-tiempo'));
       await tester.pumpAndSettle();
+      final posicionReloj = tester.getRect(_boton('reloj-evaluacion'));
+      final superficieReloj = tester.getRect(
+        _boton('superficie-reloj-evaluacion'),
+      );
+      expect(_boton('icono-reloj-pausado'), findsNothing);
+      await tester.tap(find.byTooltip('Pausar tiempo'));
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 90));
+      await _captura(tester, 'pausa-1.1.80-01-salida');
+      await tester.pump(const Duration(milliseconds: 180));
+      await _captura(tester, 'pausa-1.1.80-02-entrada');
+      await tester.pumpAndSettle();
+      await _captura(tester, 'pausa-1.1.80-03-pausado');
+      final tiempoRestante = c.sesion.restanteMs;
+      await tester.pump(const Duration(seconds: 2));
+      expect(_boton('icono-reloj-pausado'), findsOneWidget);
+      expect(_boton('reloj-evaluacion'), findsNothing);
+      expect(
+        tester.getRect(_boton('superficie-reloj-evaluacion')),
+        superficieReloj,
+      );
+      expect(c.sesion.restanteMs, tiempoRestante);
+      await tester.tap(find.byTooltip('Reanudar tiempo'));
+      await tester.pumpAndSettle();
+      expect(_boton('icono-reloj-pausado'), findsNothing);
+      expect(tester.getRect(_boton('reloj-evaluacion')), posicionReloj);
+      await _captura(tester, 'pausa-1.1.80-04-reanudado');
+      await _montar(tester, c);
       for (var i = 0; i < 4; i++) {
         expect(_boton('responder-$i').hitTestable(), findsOneWidget);
       }

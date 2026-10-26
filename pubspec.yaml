@@ -1,7 +1,7 @@
 name: trivia_antiguedad
 description: "Trivia de la Unidad IV: evaluación individual offline para tableta."
 publish_to: 'none'
-version: 1.1.79+4087
+version: 1.1.80+4088
 
 environment:
   sdk: ^3.13.2

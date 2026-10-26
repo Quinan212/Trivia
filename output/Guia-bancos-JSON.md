@@ -50,7 +50,8 @@ La aplicación baraja las alternativas y conserva automáticamente cuál es la c
 - El banco debe alcanzar para reservar **10 preguntas por estudiante registrado**, incluidos los ausentes. Por ejemplo: 13 estudiantes requieren al menos 130 preguntas; 20 requieren al menos 200.
 - Las preguntas restantes se conservan como reserva. La cantidad total no tiene que ser múltiplo de diez.
 - Se pueden usar temas nuevos y cantidades diferentes por tema. El reparto intenta distribuirlos entre los estudiantes.
-- La carga está disponible antes de iniciar una evaluación o después de finalizarla. Para cambiar durante una evaluación, primero usá **Nueva evaluación**.
+- La carga también está disponible durante una evaluación. Después de elegir y validar el archivo, la app pide confirmar una evaluación nueva con los mismos estudiantes y los puntos en cero; la anterior queda guardada. Cancelar conserva el banco y la evaluación actuales.
+- El botón para restaurar el banco predeterminado aparece cuando hay un banco personalizado y está habilitado antes de iniciar o después de finalizar. Para restaurarlo durante una actividad, primero usá **Nueva evaluación**.
 - Antes de cargar se muestran el nombre del banco, la cantidad de preguntas y la cantidad de temas. Si el archivo es inválido o no alcanza, el banco actual se conserva.
 - El banco cargado queda guardado junto a la evaluación y se recupera al volver a abrir la app. El banco original de Unidad IV permanece disponible.
 

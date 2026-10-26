@@ -85,7 +85,7 @@ Podés preparar Trivia para otra materia cargando un **banco de preguntas en for
 
 Se admiten bancos de **10 a 2000 preguntas**, siempre que alcancen para reservar diez por estudiante. La app permite descargar una plantilla y volver al banco incluido cuando lo necesites.
 
-![Dónde cargar un banco de preguntas y descargar su plantilla](docs/guia-visual/banco.png)
+![Banco de preguntas con indicaciones para buscar, filtrar, importar JSON, descargar la plantilla y revisar la explicación](docs/guia-visual/banco.png)
 
 Para revisar una parte del banco, elegí un tema en el menú. También podés buscar por texto o subtema.
 

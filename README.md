@@ -16,9 +16,19 @@ Configurá la materia, el tema o unidad, la comisión, el docente y, si correspo
 
 ![Dónde configurar la materia, la unidad y los datos docentes](docs/guia-visual/configuracion.png)
 
+![Detalle de las cinco paletas y cómo guardar el color elegido](docs/guia-visual/paletas.png)
+
 En **Estudiantes**, revisá los nombres y marcá presentes y ausentes. Podés cargar una lista propia y corregir un nombre manteniendo presionada su fila. Antes de comenzar también se pueden eliminar estudiantes.
 
 ![Cómo cargar la lista de estudiantes desde un archivo JSON](docs/guia-visual/estudiantes.png)
+
+Cada fila tiene un interruptor de asistencia. Quienes figuran como ausentes quedan fuera del sorteo.
+
+![Detalle de los interruptores para marcar presentes y ausentes](docs/guia-visual/asistencia.png)
+
+Para corregir un nombre, mantené presionada la fila y guardá los cambios en el cuadro de edición.
+
+![Edición de apellido y nombre mediante una pulsación prolongada](docs/guia-visual/editar-estudiante.png)
 
 La app admite **hasta 20 estudiantes** y reserva **10 preguntas distintas para cada uno**. El banco debe alcanzar para todas las personas registradas, incluidos los ausentes: una lista de 15 estudiantes necesita al menos 150 preguntas.
 
@@ -42,6 +52,8 @@ La respuesta correcta y la explicación quedan disponibles para revisar al cerra
 
 En **Resultados** podés seguir los puntajes, las notas y la participación de cada estudiante. Desde ahí se abren los informes individuales o todos los informes reunidos en un único PDF.
 
+![Detalle de las columnas de aciertos, robos, puntos, nota y resultado](docs/guia-visual/resultados.png)
+
 ## Cómo se puntúa
 
 | Resultado | Puntaje |
@@ -60,6 +72,10 @@ Se admiten bancos de **10 a 2000 preguntas**, siempre que alcancen para reservar
 
 ![Dónde cargar un banco de preguntas y descargar su plantilla](docs/guia-visual/banco.png)
 
+Para revisar una parte del banco, elegí un tema en el menú. También podés buscar por texto o subtema.
+
+![Menú desplegado con los temas disponibles para filtrar las preguntas](docs/guia-visual/filtro-preguntas.png)
+
 La lista de estudiantes también se puede cargar desde un archivo JSON o descargar como plantilla con los nombres y la asistencia actuales.
 
 | Qué querés preparar | Plantilla | Guía |
@@ -73,7 +89,11 @@ Si reemplazás el banco o la lista cuando la evaluación ya comenzó, se solicit
 
 Los PDF incluyen la identificación de la evaluación, los datos docentes y el registro de cada estudiante: preguntas, alternativas, respuestas, intentos de robo y resultado. Las marcas permiten distinguir aciertos y errores; los informes de una evaluación en curso se identifican como parciales.
 
+![Detalle del informe individual con resumen, alternativa marcada y resultado de la pregunta](docs/guia-visual/informe-individual.png)
+
 Podés **guardar, compartir o imprimir** un informe individual. La opción **«Todos los informes (PDF)»** reúne los informes en un solo documento, con portada y numeración por estudiante.
+
+![Botones del visor para guardar, compartir e imprimir el PDF](docs/guia-visual/acciones-pdf.png)
 
 ## Progreso y privacidad
 

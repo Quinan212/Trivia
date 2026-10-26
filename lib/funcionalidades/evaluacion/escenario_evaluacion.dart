@@ -398,8 +398,12 @@ class EscenarioEvaluacionState extends State<EscenarioEvaluacion>
                     left: margen + 80,
                     right:
                         margen + alto + (_paginaAmpliada ? _aireSecciones : 24),
-                    top: _paginaAmpliada ? 0 : superior,
-                    bottom: _paginaAmpliada ? 0 : 16,
+                    top: _paginaAmpliada || widget.vista == 1 ? 0 : superior,
+                    bottom: _paginaAmpliada
+                        ? 0
+                        : widget.vista == 1
+                        ? h - 2 * tarjeta.center.dy
+                        : 16,
                     child: Opacity(
                       opacity: _entrada.value,
                       child: Transform.translate(
@@ -651,8 +655,12 @@ class EscenarioEvaluacionState extends State<EscenarioEvaluacion>
                   key: const ValueKey('area-seccion'),
                   left: izquierda,
                   right: margen + ancho + separacion,
-                  top: _paginaAmpliada ? 0 : superior,
-                  bottom: _paginaAmpliada ? 0 : margen,
+                  top: _paginaAmpliada || widget.vista == 1 ? 0 : superior,
+                  bottom: _paginaAmpliada
+                      ? 0
+                      : widget.vista == 1
+                      ? h - 2 * tarjeta.center.dy
+                      : margen,
                   child: Opacity(
                     opacity: _entrada.value,
                     child: Transform.translate(

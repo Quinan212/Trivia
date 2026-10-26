@@ -8,6 +8,35 @@ Se puede adaptar a distintas materias mediante bancos de preguntas propios. Incl
 
 Es **gratuita y funciona sin conexión**, sin cuentas, anuncios ni compras. Está diseñada para tabletas, tanto en horizontal como en vertical.
 
+## Guía visual
+
+Una demostración breve con capturas reales de la app, flechas y resaltados para ubicar los controles de asistencia, tiempo, robo e informes. Los estudiantes y los resultados son ficticios; el ejemplo de Resultados muestra un cierre anticipado de prueba.
+
+![Demostración de Trivia: asistencia, cronómetro, robo e informes PDF](docs/guia-visual/trivia-guia-demo.gif)
+
+[Ver o descargar el video MP4](docs/guia-visual/trivia-guia-demo.mp4).
+
+<details>
+<summary>Ver las capturas explicadas, paso a paso</summary>
+
+**1. Preparar la evaluación:** marcá presentes y ausentes antes de iniciar.
+
+![Dónde marcar la asistencia de cada estudiante](docs/guia-visual/01-asistencia.png)
+
+**2. Iniciar el tiempo:** leé la pregunta y sus opciones antes de activar los 60 segundos.
+
+![Control para iniciar el tiempo de respuesta](docs/guia-visual/02-cronometro.png)
+
+**3. Elegir un participante para el robo:** si la respuesta no fue correcta, usá el control señalado para elegir a otro estudiante habilitado.
+
+![Control de selección de estudiante para un intento de robo](docs/guia-visual/03-robo.png)
+
+**4. Consultar los informes:** desde Resultados, abrí el PDF que reúne los informes del curso.
+
+![Acceso a todos los informes de evaluación en PDF](docs/guia-visual/04-informes.png)
+
+</details>
+
 ## Cómo se usa en clase
 
 ### 1. Prepará la evaluación

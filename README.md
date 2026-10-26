@@ -62,7 +62,22 @@ En **Resultados** podés seguir los puntajes, las notas y la participación de c
 | Robo correcto | 2 puntos, hasta alcanzar el máximo de 10 |
 | Respuesta incorrecta o sin respuesta | 0 puntos; no se descuentan puntos |
 
-La aprobación es desde **7 puntos**. Al alcanzar ese puntaje, la app permite elegir entre finalizar la evaluación de esa persona o continuar para mejorar la nota. Al llegar a **10**, su participación termina automáticamente.
+La aprobación es desde **7 puntos** y la nota máxima es **10**. Los puntos de las preguntas propias y de los robos se acumulan, sin superar ese máximo: si tiene 9 y acierta un robo, llega a 10.
+
+### Al alcanzar la aprobación
+
+Cuando un estudiante alcanza o supera los **7 puntos** por primera vez, aparece un aviso con dos opciones:
+
+- **Finalizar:** termina la evaluación de esa persona con el puntaje alcanzado; deja de participar en los turnos y robos.
+- **Continuar:** sigue participando para intentar mejorar su nota, hasta llegar a 10 o completar su participación.
+
+![Aviso al llegar a 7 puntos con las opciones Finalizar y Continuar](docs/guia-visual/aprobacion-7.png)
+
+### Al llegar a la nota máxima
+
+Al alcanzar **10 puntos**, la participación de ese estudiante termina automáticamente: deja de entrar en el sorteo y de estar habilitado para los robos. La app muestra un aviso de nota máxima. En este caso, **Continuar** cierra el aviso para seguir con el resto del grupo; no vuelve a habilitar a esa persona.
+
+![Aviso al alcanzar 10 puntos y finalizar la participación del estudiante](docs/guia-visual/nota-maxima-10.png)
 
 ## Tus preguntas y tus estudiantes
 

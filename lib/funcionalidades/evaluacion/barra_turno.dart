@@ -649,8 +649,12 @@ class _BarraTurnoState extends State<BarraTurno> with TickerProviderStateMixin {
               widget.vertical && _origen == 'espera' ? .45 : .15,
               1,
             );
+            final relojYaVisible =
+                _origen == 'lectura' && _modo == 'respuestas';
             final salidaReloj = s.cronometrada
-                ? 1 - _tramo(c, .20, 1)
+                ? relojYaVisible
+                      ? 0.0
+                      : 1 - _tramo(c, .20, 1)
                 : post && r.robos.isEmpty
                 ? _tramo(t, .054, .27)
                 : 1.0;

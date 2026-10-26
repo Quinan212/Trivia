@@ -883,7 +883,27 @@ void main() {
       expect(r.propio, isNull);
       expect(_boton('responder-0'), findsNothing);
       expect(_boton('icono-reloj-pausado'), findsNothing);
+      final relojAntesDePlay = tester.element(
+        _boton('superficie-reloj-evaluacion'),
+      );
+      final posicionAntesDePlay = tester.getRect(
+        _boton('superficie-reloj-evaluacion'),
+      );
       await tester.tap(_boton('control-tiempo'));
+      await tester.pump();
+      for (final ms in [0, 80, 140, 220, 350]) {
+        await tester.pump(Duration(milliseconds: ms));
+        expect(_boton('superficie-reloj-evaluacion'), findsOneWidget);
+        expect(
+          tester.element(_boton('superficie-reloj-evaluacion')),
+          same(relojAntesDePlay),
+        );
+        expect(
+          tester.getRect(_boton('superficie-reloj-evaluacion')),
+          posicionAntesDePlay,
+        );
+      }
+      await _captura(tester, 'play-1.1.81-reloj-continuo');
       await tester.pumpAndSettle();
       final posicionReloj = tester.getRect(_boton('reloj-evaluacion'));
       final superficieReloj = tester.getRect(
